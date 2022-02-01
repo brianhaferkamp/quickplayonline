@@ -2408,29 +2408,40 @@ function highlightNames() {
 //------------------------------
 
 function changeScoreboard() {
-  var vGameScore = 0;
-  var hGameScore = 0;
-  $(".v-runs input").val(vGameScore);
-  $(".h-runs input").val(hGameScore);
+  var vGameScore = parseInt($(".v-runs").text());
+  var hGameScore = parseInt($(".h-runs").text());
 
   $(".v-score input").on("change", function () {
-    var vInningScore = parseInt($(this).val());
+    vGameScore = 0;
+    $.each($(".v-score input"), function (i, val) {
+      if ($(this).val() === "") {
+        var runs = 0;
+      } else {
+        var runs = parseInt($(this).val());
+      }
 
-    vGameScore = vInningScore + vGameScore;
+      // console.log(vGameScore);
+      vGameScore = runs + vGameScore;
+    });
 
-    $(".v-runs input").val(vGameScore);
+    $(".v-runs").text(vGameScore);
   });
 
-  $(".h-score input")
-    .not(".h-runs")
-    .on("change", function () {
-      var hInningScore = parseInt($(this).val());
-      console.log(hInningScore);
+  $(".h-score input").on("change", function () {
+    hGameScore = 0;
+    $.each($(".h-score input"), function (i, val) {
+      if ($(this).val() === "") {
+        var runs = 0;
+      } else {
+        var runs = parseInt($(this).val());
+      }
 
-      hGameScore = hInningScore + hGameScore;
-
-      $(".h-runs input").val(hGameScore);
+      // console.log(hGameScore);
+      hGameScore = runs + hGameScore;
     });
+
+    $(".h-runs").text(hGameScore);
+  });
 }
 
 changeScoreboard();
@@ -2443,10 +2454,8 @@ $(".game-reset button").on("click", function () {
   // reset scoreboard
   $(".v-score input").val("");
   $(".h-score input").val("");
-  // var vGameScore = 0;
-  // var hGameScore = 0;
-  // $(".v-runs input").val(vGameScore);
-  // $(".h-runs input").val(hGameScore);
+  $(".v-runs").text("0");
+  $(".h-runs").text("0");
 
   changeScoreboard();
 
