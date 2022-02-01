@@ -1,3 +1,12 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+html, body {
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+  color: #333;
+}
+
 .app {
   max-width: 1300px;
   margin: auto;
@@ -254,10 +263,15 @@
 .right {
   padding: 0.5rem;
 }
-
 .left h2,
 .right h2 {
   font-size: 1.2rem;
+}
+.left select,
+.right select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .lineup p {
@@ -354,6 +368,7 @@
   width: 30px;
   height: 30px;
   border: 1px solid transparent;
+  border-radius: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -459,4 +474,7 @@
   background-image: url(https://assets.codepen.io/495197/card_back_red.png);
   background-size: cover;
   background-position: center;
+}
+.card-style ul li:hover {
+  cursor: pointer;
 }
