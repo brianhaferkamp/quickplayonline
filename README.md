@@ -6,3 +6,4 @@ _Quick Play Baseball Online_ (aka, _Quick Play Online_) is the electronic versio
 The online version allows you to add pitching to the game, create a zero footprint, and introduces a fun variant called the wildcard. Learn how to play the game:
 
 - [Download the Quick Play Baseball Guide](https://github.com/brianhaferkamp/quickplayonline/raw/main/Quick%20Play%20Baseball%20Guide.pdf)
+- [Watch the video introduction to _Quick Play Online_](https://youtu.be/fvNVh0bARQk)
