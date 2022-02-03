@@ -2150,6 +2150,7 @@ function wildcard() {
 
 $(".v-cards").on("click", function () {
   var $this = $(this);
+  var cardSuitPlaceholder = $this.find(".card").find(".card-suit");
 
   var hPitcherGrade = $(".h-pitcher-rating .active").text();
   // console.log(vPitcherGrade);
@@ -2206,6 +2207,11 @@ $(".v-cards").on("click", function () {
   } else if (result == 8) {
     result = 4;
   }
+
+  // choose suit
+  var suit;
+  cardSuit(cardSuitPlaceholder);
+
   $(".v-card-" + result).addClass("show");
   $this.find(".card").addClass("no-bg");
 
@@ -2218,6 +2224,7 @@ $(".v-cards").on("click", function () {
 
 $(".h-cards").on("click", function () {
   var $this = $(this);
+  var cardSuitPlaceholder = $this.find(".card").find(".card-suit");
 
   var vPitcherGrade = $(".v-pitcher-rating .active").text();
   // console.log(hPitcherGrade);
@@ -2274,6 +2281,11 @@ $(".h-cards").on("click", function () {
   } else if (result == 8) {
     result = 4;
   }
+
+  // choose suit
+  var suit;
+  cardSuit(cardSuitPlaceholder);
+
   $(".h-card-" + result).addClass("show");
   $this.find(".card").addClass("no-bg");
 
@@ -2286,6 +2298,7 @@ $(".h-cards").on("click", function () {
 
 $(".hits-cards").on("click", function () {
   var $this = $(this);
+  var cardSuitPlaceholder = $this.find(".card").find(".card-suit");
 
   $(".hits-cards .card").hide();
 
@@ -2332,6 +2345,10 @@ $(".hits-cards").on("click", function () {
   } else if (result == 4) {
     result = "ace";
   }
+
+  // choose suit
+  var suit;
+  cardSuit(cardSuitPlaceholder);
 
   $(".hits-card-" + result).addClass("show");
   $this.find(".card").addClass("no-bg");
@@ -2504,3 +2521,48 @@ $(".choose-card-style").on("click", function () {
     "background-image": "url(" + bg + ")"
   });
 });
+
+//------------------------------
+// Card Suit
+//------------------------------
+
+function cardSuit(cardSuitPlaceholder) {
+  // roll the dice
+  function rollSuitDice() {
+    var dice = {
+      sides: 8,
+      roll: function () {
+        var randomNumber = Math.floor(Math.random() * this.sides) + 1;
+        return randomNumber;
+      }
+    };
+
+    result = dice.roll();
+  }
+
+  rollSuitDice();
+
+  // show new result
+
+  // show random situation card
+  if (result == 1) {
+    suit = '<img src="/img/icons8-spades-red.png">';
+  } else if (result == 2) {
+    suit = '<img src="/img/icons8-spades-black.png">';
+  } else if (result == 3) {
+    suit = '<img src="/img/icons8-heart-red.png">';
+  } else if (result == 4) {
+    suit = '<img src="/img/icons8-heart-black.png">';
+  } else if (result == 5) {
+    suit = '<img src="/img/icons8-clubs-red.png">';
+  } else if (result == 6) {
+    suit = '<img src="/img/icons8-clubs-black.png">';
+  } else if (result == 7) {
+    suit = '<img src="/img/icons8-diamonds-red.png">';
+  } else if (result == 8) {
+    suit = '<img src="/img/icons8-diamonds-black.png">';
+  }
+
+  cardSuitPlaceholder.html(suit);
+  // console.log(suit);
+}

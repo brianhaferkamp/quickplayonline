@@ -189,6 +189,18 @@ p {
 .hits-cards {
   position: relative;
 }
+.v-cards .card-result .card-suit,
+.h-cards .card-result .card-suit,
+.hits-cards .card-result .card-suit {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+}
+.v-cards .card-result .card-suit img,
+.h-cards .card-result .card-suit img,
+.hits-cards .card-result .card-suit img {
+  width: 27px;
+}
 .v-cards p,
 .h-cards p,
 .hits-cards p {
@@ -212,6 +224,7 @@ p {
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   border: 1px solid #999;
+  position: relative;
 }
 @media (min-width: 450px) {
   .v-cards .card,
