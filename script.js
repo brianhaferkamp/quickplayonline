@@ -1130,7 +1130,7 @@ var Giants = {
       power: ""
     },
     {
-      name: "Larry Hendon",
+      name: "Larry Herndon",
       star: "★",
       power: ""
     },
