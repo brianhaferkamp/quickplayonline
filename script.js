@@ -2550,9 +2550,9 @@ function cardSuit(cardSuitPlaceholder) {
   } else if (result == 2) {
     suit = '<img src="img/icons8-spades-black.png">';
   } else if (result == 3) {
-    suit = '<img src="img/icons8-heart-red.png">';
+    suit = '<img src="img/icons8-hearts-red.png">';
   } else if (result == 4) {
-    suit = '<img src="img/icons8-heart-black.png">';
+    suit = '<img src="img/icons8-hearts-black.png">';
   } else if (result == 5) {
     suit = '<img src="img/icons8-clubs-red.png">';
   } else if (result == 6) {
