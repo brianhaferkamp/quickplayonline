@@ -2546,21 +2546,21 @@ function cardSuit(cardSuitPlaceholder) {
 
   // show random situation card
   if (result == 1) {
-    suit = '<img src="/img/icons8-spades-red.png">';
+    suit = '<img src="img/icons8-spades-red.png">';
   } else if (result == 2) {
-    suit = '<img src="/img/icons8-spades-black.png">';
+    suit = '<img src="img/icons8-spades-black.png">';
   } else if (result == 3) {
-    suit = '<img src="/img/icons8-heart-red.png">';
+    suit = '<img src="img/icons8-heart-red.png">';
   } else if (result == 4) {
-    suit = '<img src="/img/icons8-heart-black.png">';
+    suit = '<img src="img/icons8-heart-black.png">';
   } else if (result == 5) {
-    suit = '<img src="/img/icons8-clubs-red.png">';
+    suit = '<img src="img/icons8-clubs-red.png">';
   } else if (result == 6) {
-    suit = '<img src="/img/icons8-clubs-black.png">';
+    suit = '<img src="img/icons8-clubs-black.png">';
   } else if (result == 7) {
-    suit = '<img src="/img/icons8-diamonds-red.png">';
+    suit = '<img src="img/icons8-diamonds-red.png">';
   } else if (result == 8) {
-    suit = '<img src="/img/icons8-diamonds-black.png">';
+    suit = '<img src="img/icons8-diamonds-black.png">';
   }
 
   cardSuitPlaceholder.html(suit);
