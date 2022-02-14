@@ -2153,7 +2153,7 @@ $(".v-cards").on("click", function () {
   var cardSuitPlaceholder = $this.find(".card").find(".card-suit");
 
   var hPitcherGrade = $(".h-pitcher-rating .active").text();
-  // console.log(vPitcherGrade);
+  // console.log(hPitcherGrade);
   var sides;
 
   if (hPitcherGrade == "A") {
@@ -2227,7 +2227,7 @@ $(".h-cards").on("click", function () {
   var cardSuitPlaceholder = $this.find(".card").find(".card-suit");
 
   var vPitcherGrade = $(".v-pitcher-rating .active").text();
-  // console.log(hPitcherGrade);
+  // console.log(vPitcherGrade);
   var sides;
 
   if (vPitcherGrade == "A") {
@@ -2249,7 +2249,7 @@ $(".h-cards").on("click", function () {
   // roll the dice
   function rollCardDice() {
     var dice = {
-      sides: 8,
+      sides: sides,
       roll: function () {
         var randomNumber = Math.floor(Math.random() * this.sides) + 1;
         return randomNumber;
