@@ -1592,9 +1592,9 @@ function initVisitingTeam() {
           );
       });
 
-      $(".team-pitching-grade").text(staffTeamGrade);
-      $(".starters-pitching-grade").text(staffStartersGrade);
-      $(".relievers-pitching-grade").text(staffRelieversGrade);
+      $(".v-staff .team-pitching-grade").text(staffTeamGrade);
+      $(".v-staff .starters-pitching-grade").text(staffStartersGrade);
+      $(".v-staff .relievers-pitching-grade").text(staffRelieversGrade);
     }
 
     vLineup.prop("hidden", false);
@@ -2010,9 +2010,9 @@ function initHomeTeam() {
       });
 
       // fill in pitching grades next to staff label
-      $(".team-pitching-grade").text(staffTeamGrade);
-      $(".starters-pitching-grade").text(staffStartersGrade);
-      $(".relievers-pitching-grade").text(staffRelieversGrade);
+      $(".h-staff .team-pitching-grade").text(staffTeamGrade);
+      $(".h-staff .starters-pitching-grade").text(staffStartersGrade);
+      $(".h-staff .relievers-pitching-grade").text(staffRelieversGrade);
     }
 
     hLineup.prop("hidden", false);
